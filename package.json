@@ -1,0 +1,14 @@
+{
+  "name": "events-extra",
+  "version": "1.0.0",
+  "description": "NodeJS EventEmitter with some advanced features",
+  "main": "index.js",
+  "repository": "https://github.com/tormozz48/events-extra.git",
+  "author": "andrey.kuznetsov48@yandex.ru",
+  "license": "Apache License 2.0",
+  "private": false,
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-gemini-testing": "^2.8.0"
+  }
+}
