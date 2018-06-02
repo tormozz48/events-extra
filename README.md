@@ -81,7 +81,7 @@ sourceEmitter.emit('foo', 'World');
 Example:
 
 ```js
-const EventsExtra = require('events-extra);
+const EventsExtra = require('events-extra');
 
 const sourceEmitter = new EventsExtra();
 const destEmitter = new EventsExtra();
