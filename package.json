@@ -3,9 +3,33 @@
   "version": "1.0.0",
   "description": "NodeJS EventEmitter with some advanced features",
   "main": "index.js",
-  "repository": "https://github.com/tormozz48/events-extra.git",
-  "author": "andrey.kuznetsov48@yandex.ru",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tormozz48/events-extra.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tormozz48/events-extra/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "author": "Andrey Kuznetsov <andrey.kuznetsov48@yandex.ru> (https://github.com/tormozz48)",
   "license": "Apache-2.0",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "keywords": [
+    "event",
+    "extra",
+    "nodejs",
+    "event-emitter",
+    "emit and wait",
+    "wait",
+    "emit",
+    "passthrough",
+    "subscribe"
+  ],
+  "readme": "README.md",
   "private": false,
   "scripts": {
     "lint": "eslint .",
