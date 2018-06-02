@@ -25,6 +25,12 @@ module.exports = class ExtraEmitter extends EventEmitter {
         return mkPassthroughFn('emitAndWait')(...args);
     }
 
+    /**
+     * Emit event and wait for all async handler execution results
+     * @param {String} event
+     * @param {any} args
+     * @returns {Promise}
+     */
     emitAndWait(event, ...args) {
         return _(this.listeners(event))
             .map((l) => Promise.method(l).apply(this, args.concat('async')))
@@ -33,7 +39,7 @@ module.exports = class ExtraEmitter extends EventEmitter {
     }
 
     /**
-     * Emit event emitted by emitter
+     * Subscribe on event(s) from given emitter and trigger the same event(s) from itself
      * @param {EventEmitter} emitter
      * @param {String|String[]} event or array of events to passthrough
      */
