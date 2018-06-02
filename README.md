@@ -1,12 +1,12 @@
 # events-extra
 NodeJS EventEmitter with some advanced features
 
-[![npm version](https://badge.fury.io/js/events-extra.svg)]
-(https://badge.fury.io/js/events-extra)
 [![Build Status](https://travis-ci.org/tormozz48/events-extra.svg?branch=master)](https://travis-ci.org/tormozz48/events-extra)
 [![Dependency Status](https://david-dm.org/tormozz48/events-extra.svg)](https://david-dm.org/tormozz48/events-extra)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
+
+[![npm](https://img.shields.io/npm/v/npm.svg?style=for-the-badge)](https://www.npmjs.com/package/events-extra)
 [![forthebadge](http://forthebadge.com/badges/uses-js.svg)](http://forthebadge.com)
 
 
