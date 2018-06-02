@@ -180,7 +180,19 @@ describe('async-emitter', () => {
 
             return child.emitAndWait('some-event')
                 .then((data) => {
-                    assert.equal(data, 'some-data');
+                    assert.deepEqual(data[0][0], 'some-data');
+                });
+        });
+
+        it('should passthrough multiple arguments', () => {
+            runner.passthroughEvent(child, 'some-event');
+            runner.on('some-event', function(...args) {
+                return `some-data ${args[0]} ${args[1]}`;
+            });
+
+            return child.emitAndWait('some-event', 'foo', 'bar')
+                .then((data) => {
+                    assert.deepEqual(data[0][0], 'some-data foo bar');
                 });
         });
     });
