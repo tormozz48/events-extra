@@ -11,7 +11,7 @@ Add package into your project:
 
 Include package into your sourse code.
 ```js
-const EventsExtra = require('events-extra);
+const EventsExtra = require('events-extra');
 ```
 or even:
 ```js
@@ -38,7 +38,7 @@ reason of first rejected handler.
 
 Example:
 ```js
-const EventsExtra = require('events-extra);
+const EventsExtra = require('events-extra');
 
 const myEmitter = new EventsExtra();
 
@@ -62,7 +62,7 @@ Appends listener to given emitter for given events, handles these events and tri
 
 Example:
 ```js
-const EventsExtra = require('events-extra);
+const EventsExtra = require('events-extra');
 
 const sourceEmitter = new EventsExtra();
 const destEmitter = new EventsExtra();
