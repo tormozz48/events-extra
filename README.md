@@ -7,8 +7,6 @@ NodeJS EventEmitter with some advanced features
 [![Dependency Status](https://david-dm.org/tormozz48/events-extra.svg)](https://david-dm.org/tormozz48/events-extra)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-[![forthebadge](http://forthebadge.com/badges/built-by-developers.svg)](http://forthebadge.com)
-[![forthebadge](http://forthebadge.com/badges/uses-git.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/badges/uses-js.svg)](http://forthebadge.com)
 
 
