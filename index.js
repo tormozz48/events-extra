@@ -5,17 +5,29 @@ const Promise = require('bluebird');
 const EventEmitter = require('events').EventEmitter;
 
 module.exports = class ExtraEmitter extends EventEmitter {
+    /**
+     * @static
+     * @param {EventEmitter} from
+     * @param {EventEmitter} to
+     * @param {String|String[]} event or array of events to passthrough
+     */
     static passthroughEvent(...args) {
         return mkPassthroughFn('emit')(...args);
     }
 
+    /**
+     * @static
+     * @param {EventEmitter} from
+     * @param {EventEmitter} to
+     * @param {String|String[]} event or array of events to passthrough
+     */
     static passthroughEventAsync(...args) {
         return mkPassthroughFn('emitAndWait')(...args);
     }
 
     emitAndWait(event, ...args) {
         return _(this.listeners(event))
-            .map((l) => Promise.method(l).apply(this, args))
+            .map((l) => Promise.method(l).apply(this, args.concat('async')))
             .thru(waitForResults)
             .value();
     }
@@ -31,11 +43,11 @@ module.exports = class ExtraEmitter extends EventEmitter {
             return;
         }
 
-        emitter.on(event, (data, opts) => {
-            if (opts && opts.shouldWait) {
-                return this.emitAndWait(event, data);
+        emitter.on(event, (...args) => {
+            if (args.includes('async')) {
+                return this.emitAndWait(event, ...args);
             } else {
-                this.emit(event, data);
+                this.emit(event, ...args);
             }
         });
     }
