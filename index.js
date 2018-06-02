@@ -4,7 +4,7 @@ const _ = require('lodash');
 const Promise = require('bluebird');
 const EventEmitter = require('events').EventEmitter;
 
-module.exports = class AsyncEmitter extends EventEmitter {
+module.exports = class ExtraEmitter extends EventEmitter {
     static passthroughEvent(...args) {
         return mkPassthroughFn('emit')(...args);
     }
@@ -59,4 +59,4 @@ function mkPassthroughFn(methodName) {
     };
 
     return passEvents;
-};
+}
