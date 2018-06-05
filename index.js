@@ -1,6 +1,5 @@
 'use strict';
 
-const _ = require('lodash');
 const Promise = require('bluebird');
 const EventEmitter = require('events').EventEmitter;
 
@@ -32,10 +31,10 @@ module.exports = class ExtraEmitter extends EventEmitter {
      * @returns {Promise}
      */
     emitAndWait(event, ...args) {
-        return _(this.listeners(event))
-            .map((l) => Promise.method(l).apply(this, args.concat('async')))
-            .thru(waitForResults)
-            .value();
+        const asyncHandlers = this.listeners(event)
+            .map((listener) => Promise.method(listener).apply(this, markAsAsync(args)));
+
+        return waitForResults(asyncHandlers);
     }
 
     /**
@@ -44,7 +43,7 @@ module.exports = class ExtraEmitter extends EventEmitter {
      * @param {String|String[]} event or array of events to passthrough
      */
     passthroughEvent(emitter, event) {
-        if (_.isArray(event)) {
+        if (Array.isArray(event)) {
             event.forEach(this.passthroughEvent.bind(this, emitter));
             return;
         }
@@ -58,6 +57,10 @@ module.exports = class ExtraEmitter extends EventEmitter {
         });
     }
 };
+
+function markAsAsync(args) {
+    return args.includes['async'] ? args : args.concat('async');
+}
 
 function waitForResults(promises) {
     return Promise.all(promises.map((p) => p.reflect()))

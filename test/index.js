@@ -4,7 +4,7 @@ const Promise = require('bluebird');
 const ExtraEmitter = require('../index');
 
 describe('async-emitter', () => {
-    const sandbox = sinon.sandbox.create();
+    const sandbox = sinon.createSandbox();
     let emitter;
 
     beforeEach(() => {

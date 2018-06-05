@@ -45,7 +45,6 @@
     "sinon": "^5.0.10"
   },
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "lodash": "^4.17.10"
+    "bluebird": "^3.5.1"
   }
 }
