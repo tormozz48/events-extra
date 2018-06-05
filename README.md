@@ -1,13 +1,11 @@
 # events-extra
 NodeJS EventEmitter with some advanced features
 
-[![Build Status](https://travis-ci.org/tormozz48/events-extra.svg?branch=master)](https://travis-ci.org/tormozz48/events-extra)
-[![Dependency Status](https://david-dm.org/tormozz48/events-extra.svg)](https://david-dm.org/tormozz48/events-extra)
 [![npm](https://img.shields.io/npm/v/events-extra.svg)](https://www.npmjs.com/package/events-extra)
-[![Github All Releases](https://img.shields.io/github/downloads/tormozz48/events-extra/total.svg)](https://github.com/tormozz48/events-extra)
-[![node](https://img.shields.io/node/v/events-extra.svg)](https://www.npmjs.com/package/events-extra)
+[![Build Status](https://travis-ci.org/tormozz48/events-extra.svg?branch=master)](https://travis-ci.org/tormozz48/events-extra)
+[![Coverage Status](https://coveralls.io/repos/github/tormozz48/events-extra/badge.svg?branch=master)](https://coveralls.io/github/tormozz48/events-extra?branch=master)
+[![Dependency Status](https://david-dm.org/tormozz48/events-extra.svg)](https://david-dm.org/tormozz48/events-extra)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![GitHub last commit](https://img.shields.io/github/last-commit/tormozz48/events-extra.svg)](https://github.com/tormozz48/events-extra)
 [![license](https://img.shields.io/github/license/tormozz48/events-extra.svg)](https://github.com/tormozz48/events-extra/blob/master/LICENSE)
 
 ```
